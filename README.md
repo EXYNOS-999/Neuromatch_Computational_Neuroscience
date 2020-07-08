@@ -4,38 +4,40 @@
 
 **Objectives**: Introduce traditional and emerging computational neuroscience tools, their complementarity, and what they can tell us about the brain. A main focus is on modeling choices, model creation, model evaluation and understanding how they relate to biological questions.
 
-**Tutorial microstructure**: ~10min talk, ~20min tutorial (repeated)
+**Tutorial microstructure**: ~5min talk, ~15min hands-on (repeated)
 
-**Day structure**: Opening keynote, 3h lecture/tutorial modules, 1h interpretation (what did we learn today, what does it mean, underlying philosophy, 1h professional development/ meta-science, evening group projects (for interactive track). There will also be many networking activities!
+**Day structure**: Opening keynote, 2.5h lecture/tutorial modules, 1/2h group discussion, 1h interpretation lecture + live Q&As (what did we learn today, what does it mean, underlying philosophy). There will also be many networking activities!
+
+**Note for visitors from China**: This repository contains many links to YouTube and Google Colab. We have a version of the repository with those same videos posted on bilibili, and the Google Colab links replaced with links to Aliyun. Please visit the [China Accessible Neuromatch Course-Content](https://github.com/erlichlab/course-content/)
 
 **Prerequisites**: [See here](https://github.com/NeuromatchAcademy/precourse)
 
 # Course outline
-
+ 
 * [Week 1](#week-1)
-    * [Mon, July 13: What do models buy us?](#mon-july-13-what-do-models-buy-us)
-    * [Tue, July 14: How-to-model](#tue-july-14-how-to-model)
-    * [Wed, July 15: Model fitting](#wed-july-15-model-fitting)
-    * [Thu, July 16: Machine learning (ML) - decoding](#thu-july-16-machine-learning-ml---decoding)
-    * [Fri, July 17: Dimensionality reduction / manifolds](#fri-july-17-dimensionality-reduction--manifolds)
+    * [Mon, July 13: Model Types](#mon-july-13-model-types)
+    * [Tue, July 14: Modeling Practice](#tue-july-14-modeling-practice)
+    * [Wed, July 15: Model Fitting](#wed-july-15-model-fitting)
+    * [Thu, July 16: Machine Learning](#thu-july-16-machine-learning)
+    * [Fri, July 17: Dimensionality Reduction](#fri-july-17-dimensionality-reduction)
 * [Week 2](#week-2)
-    * [Mon, July 20: Bayes](#mon-july-20-bayes)
-    * [Tue, July 21: Time series 1 (linear systems)](#tue-july-21-time-series-1-linear-systems)
-    * [Wed, July 22: Time series 2 (decision making)](#wed-july-22-time-series-2-decision-making)
+    * [Mon, July 20: Bayesian Statistics](#mon-july-20-bayesian-statistics)
+    * [Tue, July 21: Linear Systems](#tue-july-21-linear-systems)
+    * [Wed, July 22: Decision Making](#wed-july-22-decision-making)
     * [Thu, July 23: Optimal control](#thu-july-23-optimal-control)
-    * [Fri, July 24: Reinforcement learning (RL)](#fri-july-24-reinforcement-learning-rl)
+    * [Fri, July 24: Reinforcement Learning](#fri-july-24-reinforcement-learning)
 * [Week 3](#week-3)
-    * [Mon, July 27: Real neurons](#mon-july-27-real-neurons)
-    * [Tue, July 28: What happens in dynamic networks?](#tue-july-28-what-happens-in-dynamic-networks)
-    * [Wed, July 29: Causality &amp; networks](#wed-july-29-causality--networks)
-    * [Thu, July 30: Deep learning (DL) 1](#thu-july-30-deep-learning-dl-1)
-    * [Fri, July 31: Deep learning (DL) 2](#fri-july-31-deep-learning-dl-2)
+    * [Mon, July 27: Real Neurons](#mon-july-27-real-neurons)
+    * [Tue, July 28: Dynamic Networks](#tue-july-28-dynamic-networks)
+    * [Wed, July 29: Network Causality](#wed-july-29-network-causality)    
+    * [Thu, July 30: Deep Learning 1](#thu-july-30-deep-learning-1)
+    * [Fri, July 31: Deep Learning 2](#fri-july-31-deep-learning-2)
 
 ----
 
 ## Week 1
 
-### Mon, July 13: What do models buy us?
+### Mon, July 13: Model Types
 
 **Description** Introduce different example model types (Marr 1-3, what/how/why) and the kinds of questions they can answer. Realize how different models map onto different datasets.
 
@@ -43,10 +45,10 @@
 |------------------|---------------------------------------|-----------------------------------------------------------------------|
 |    0:00-0:30\*   |    Intro / keynote & tutorial setup   |    Model classifications                                              |
 |    0:30-0:45     |    Pod Q&A                            |    Lecture discussion with pod TA                                     |
-|    0:50-2:05     |    Tutorials 1 & 2 + nano-lectures    |    Marr 1-3                                                           |
+|    0:50-2:05     |    Tutorials 1 & 2 + nano-lectures    |    "What"/"How" models                                                |
 |    2:05-2:25     |    Discussion 1                       |    Discussion with pod TA                                             |
 |    2:25-3:25     |    Big break                          |    BREAK                                                              |
-|    3:25-4:40     |    Tutorials 3 & 4 + nano-lectures    |    "What"/"How"/"Why"                                                 |
+|    3:25-4:40     |    Tutorials 3 + nano-lectures        |    "Why" model & discussion                                           |
 |    4:40-5:00     |    Discussion 2                       |    Discussion with pod TA                                             |
 |    5:05-5:35     |    Outro                              |    Recap session, The role of models in discovery                     |
 |    5:35-6:00     |    Q&A                                |    Q&A with lecturers/Mentors                                         |
@@ -55,20 +57,20 @@
 
 ----
 
-### Tue, July 14: How-to-model
+### Tue, July 14: Modeling Practice
 
-**Description** Introduction of datasets (spikes, EEG, fMRI + behavior), and questions about them. These questions will foreshadow the whole summer school.
+**Description** Introduction to the process of building models.
 
 |    Time (Hour)   |    Lecture                            |    Details                                                            |
 |------------------|---------------------------------------|-----------------------------------------------------------------------|
-|    0:00-0:30\*   |    Intro / keynote & tutorial setup   |    NMA organization, expectations, code of conduct, modeling vs. data |
+|    0:00-0:30\*   |    Intro / keynote & tutorial setup   |    How to approach modeling                                           |
 |    0:30-0:45     |    Pod Q&A                            |    Lecture discussion with pod TA                                     |
-|    0:50-2:05     |    Tutorials 1 & 2 + nano-lectures    |    Data into, preprocessing, link of neural data to behavior          |
+|    0:50-2:05     |    Tutorial 1 + nano-lectures         |    Framing the question                                               |
 |    2:05-2:25     |    Discussion 1                       |    Discussion with pod TA                                             |
 |    2:25-3:25     |    Big break                          |    BREAK                                                              |
-|    3:25-4:40     |    Tutorials 3 & 4 + nano-lectures    |    Tuning (RFs, motor, STA), What is means to "understand" (signal detection) |
+|    3:25-4:40     |    Tutorial 2 + nano-lectures         |    Model implementation and testing                                   |
 |    4:40-5:00     |    Discussion 2                       |    Discussion with pod TA                                             |
-|    5:05-5:35     |    Outro                              |    Recap session                                                      |
+|    5:05-5:35     |    Outro                              |    Recap session, the modeling process                                |
 |    5:35-6:00     |    Q&A                                |    Q&A with lecturers/Mentors                                         |
 
 \* the Intro / keynote will be watched asynchronously, which means that you can watch this lecture before the start of the day
@@ -95,7 +97,7 @@
 
 ----
 
-### Thu, July 16: Machine learning (ML) - decoding
+### Thu, July 16: Machine Learning
 
 **Description** Introduction to machine learning. The commonly used approaches, how to avoid false positives, how to do it well
 
@@ -103,19 +105,19 @@
 |-------------|----------------------------------|--------------------------------------------------------------------|
 |   0:00-0:30\*| Intro / keynote & tutorial setup | We want to predict ([scikit learn](https://scikit-learn.org/))     |
 |   0:30-0:45 | Pod Q&A                          | Lecture discussion with pod TA                                     |
-|   0:50-2:05 | Tutorials 1 & 2 + nano-lectures  | GLMs (temporal filtering models), Linear classifier (SVM)          |
+|   0:50-2:05 | Tutorials 1 & 2 + nano-lectures  | Introduction to GLMs and regularization                            |
 |   2:05-2:25 | Discussion 1                     | Discussion with pod TA                                             |
 |   2:25-3:25 | Big break                        | BREAK                                                              |
-|   3:25-4:40 | Tutorials 3 & 4 + nano-lectures  | Regularization (L1, L2), Shallow nonlinear classifier (SVM with RBF kernel) |
+|   3:25-4:40 | Tutorials 3 & 4 + nano-lectures  | GLMs for encoding and decoding                                     |
 |   4:40-5:00 | Discussion 2                     | Discussion with pod TA                                             |
-|   5:05-5:35 | Outro                            | Recap session, Promises and pitfalls of ML                         |
+|   5:05-5:35 | Outro                            | Recap session, Promises and pitfalls of ML for Neuroscience        |
 |   5:35-6:00 | Q&A                              | Q&A with lecturers/Mentors                                         |
 
 \* the Intro / keynote will be watched asynchronously, which means that you can watch this lecture before the start of the day
 
 ---- 
 
-### Fri, July 17: Dimensionality reduction / manifolds
+### Fri, July 17: Dimensionality Reduction
 
 **Description** Concept of dimensionality reduction, ways of doing it, what it means
 
@@ -123,10 +125,10 @@
 |------------------|---------------------------------------|-----------------------------------------------------------------------|
 |    0:00-0:30\*   |    Intro / keynote & tutorial setup   |    Manifolds to understand                                            |
 |    0:30-0:45     |    Pod Q&A                            |    Lecture discussion with pod TA                                     |
-|    0:50-2:05     |    Tutorials 1 & 2 + nano-lectures    |    PCA 1, PCA 2 (+CCA/clustering)                                     |
+|    0:50-2:05     |    Tutorials 1 & 2 + nano-lectures    |    PCA 1 (orthonormal basis), PCA 2 (eigenvalues)                                     |
 |    2:05-2:25     |    Discussion 1                       |    Discussion with pod TA                                             |
 |    2:25-3:25     |    Big break                          |    BREAK                                                              |
-|    3:25-4:40     |    Tutorials 3 & 4 + nano-lectures    |    Signal vs. Noise Manifolds, Visualizing high-D nonlinear manifolds (e.g. t-SNE) |
+|    3:25-4:40     |    Tutorials 3 & 4 + nano-lectures    |    MNIST with PCA, MNIST with t-SNE |
 |    4:40-5:00     |    Discussion 2                       |    Discussion with pod TA                                             |
 |    5:05-5:35     |    Outro                              |    Recap session, The link between high-dimensional brain signals and low-dimensional behavior |
 |    5:35-6:00     |    Q&A                                |    Q&A with lecturers/Mentors                                         |
@@ -144,7 +146,7 @@
 
 ## Week 2
 
-### Mon, July 20: Bayes
+### Mon, July 20: Bayesian Statistics
 
 **Description** Bayesian statistics, modeling of behavior, modeling of neural data, quantifying information
 
@@ -152,10 +154,10 @@
 |-------------|----------------------------------|--------------------------------------------------------------------|
 |   0:00-0:30*| Intro / keynote & tutorial setup | Uncertainty                                                        |
 |   0:30-0:45 | Pod Q&A                          | Lecture discussion with pod TA                                     |
-|   0:50-2:05 | Tutorials 1 & 2 + nano-lectures  | Bayes rule I (product rule: cue combination), Bayes rule II (Marginalization and nuisance variables) |
+|   0:50-2:05 | Tutorials 1 & 2 + nano-lectures  | Bayes rule: cue combination and marginalization                    |
 |   2:05-2:25 | Discussion 1                     | Discussion with pod TA                                             |
 |   2:25-3:25 | Big break                        | BREAK                                                              |
-|   3:25-4:40 | Tutorials 3 & 4 + nano-lectures  | Causal inference & structural models (use as example for marginalization), Bayesian decision theory |
+|   3:25-4:40 | Tutorials 3 & 4 + nano-lectures  | Bayesian Decision Theory & Causal inference                        |
 |   4:40-5:00 | Discussion 2                     | Discussion with pod TA                                             |
 |   5:05-5:35 | Outro                            | Recap session, Advanced Bayesian methods                           |
 |   5:35-6:00 | Q&A                              | Q&A with lecturers/Mentors                                         |
@@ -164,7 +166,7 @@
 
 ---- 
 
-### Tue, July 21: Time series 1 (linear systems)
+### Tue, July 21: Linear Systems
 
 **Description** How to make estimates over time, how the brain does it
 
@@ -172,10 +174,10 @@
 |-------------|----------------------------------|--------------------------------------------------------------------|
 |   0:00-0:30*| Intro / keynote & tutorial setup | World has time                                                     |
 |   0:30-0:45 | Pod Q&A                          | Lecture discussion with pod TA                                     |
-|   0:50-2:05 | Tutorials 1 & 2 + nano-lectures  | Linear systems theory I (ND deterministic), Linear systems theory II (1D stochastic = OU process; ND stocastic = AR(1)) |
+|   0:50-2:05 | Tutorials 1 & 2 + nano-lectures  | Linear systems theory I (ND deterministic) and Markov process      |
 |   2:05-2:25 | Discussion 1                     | Discussion with pod TA                                             |
 |   2:25-3:25 | Big break                        | BREAK                                                              |
-|   3:25-4:40 | Tutorials 3 & 4 + nano-lectures  | Markov process, State space model                                  |
+|   3:25-4:40 | Tutorials 3 & 4 + nano-lectures  | Linear systems theory II (1D stochastic = OU process; ND stocastic = AR(1)) and State space model |
 |   4:40-5:00 | Discussion 2                     | Discussion with pod TA                                             |
 |   5:05-5:35 | Outro                            | Recap session, Linear systems rule the world                       |
 |   5:35-6:00 | Q&A                              | Q&A with lecturers/Mentors                                         |
@@ -184,7 +186,7 @@
 
 ---- 
 
-### Wed, July 22: Time series 2 (decision making)
+### Wed, July 22: Decision Making
 
 **Description** How we can make decisions when information comes in over time
 
@@ -204,7 +206,7 @@
 
 ---- 
 
-### Thu, July 23: Optimal control
+### Thu, July 23: Optimal Control
 
 **Description** We need to move gain info and reach goals
 
@@ -224,7 +226,7 @@
 
 ---- 
 
-### Fri, July 24: Reinforcement learning (RL)
+### Fri, July 24: Reinforcement Learning
 
 **Description** The setting of reinforcement learning and how it approximates the real world, behavior, and potential brain implementations
 
@@ -253,7 +255,7 @@
 
 ## Week 3
 
-### Mon, July 27: Real neurons
+### Mon, July 27: Real Neurons
 
 **Description** The things neurons are made of, channels, morphologies, neuromodulators, and plasticity
 
@@ -261,10 +263,10 @@
 |-------------|----------------------------------|--------------------------------------------------------------------|
 | 0:00 - 0:30*| Intro / keynote & tutorial setup | Real neurons ftw                                                   |
 | 0:30 - 0:45 | Pod Q&A                          | Lecture discussion with pod TA                                     |
-| 0:50 - 2:05 | Tutorials 1 & 2 + nano-lectures  | Channels, HH, LIF neuron                                           |
+| 0:50 - 2:05 | Tutorials 1 & 2 + nano-lectures  | Reduced neuron models and transfer of synchrony                    |
 | 2:05 - 2:25 | Discussion 1                     | Discussion with pod TA                                             |
 | 2:25 - 3:25 | Big break                        | BREAK                                                              |
-| 3:25 - 4:40 | Tutorials 3 & 4 + nano-lectures  | LNP (loses fine timing info), Hebbian plasticity & STDP            |
+| 3:25 - 4:40 | Tutorials 3 & 4 + nano-lectures  | Short-term plasticity of synapses and Hebbian plasticity & STDP    |
 | 4:40 - 5:00 | Discussion 2                     | Discussion with pod TA                                             |
 | 5:05 - 5:35 | Outro                            | Recap session, A variety of neuron models                          |
 | 5:35 - 6:00 | Q&A                              | Q&A with lecturers/Mentors                                         |
@@ -273,7 +275,7 @@
 
 ---- 
 
-### Tue, July 28: What happens in dynamic networks?
+### Tue, July 28: Dynamic Networks
 
 **Description** How single neurons create population dynamics
 
@@ -281,10 +283,10 @@
 |-------------|----------------------------------|--------------------------------------------------------------------|
 | 0:00 - 0:30*| Intro / keynote & tutorial setup | Mechanistic models of different types of brain actvivity           |
 | 0:30 - 0:45 | Pod Q&A                          | Lecture discussion with pod TA                                     |
-| 0:50 - 2:05 | Tutorials 1 & 2 + nano-lectures  | Spikes to rates, Wilson-Cowen model (coarse-grained), oscillations & synchrony |
+| 0:50 - 2:05 | Tutorials 1 & 2 + nano-lectures  | 2D dynamical systems, Wilson-Cowen model (coarse-grained), oscillations & synchrony |
 | 2:05 - 2:25 | Discussion 1                     | Discussion with pod TA                                             |
 | 2:25 - 3:25 | Big break                        | BREAK                                                              |
-| 3:25 - 4:40 | Tutorials 3 & 4 + nano-lectures  | Attractors & local linearization around fixed points, Chaos in rate networks (stimulus dependent chaotic attractor) |
+| 3:25 - 4:40 | Tutorials 3 & 4 + nano-lectures  | Attractors & local linearization around fixed points, Balanced Amplification & Inhibition-stabilized network |
 | 4:40 - 5:00 | Discussion 2                     | Discussion with pod TA                                             |
 | 5:05 - 5:35 | Outro                            | Recap session, A theory of the whole brain                         |
 | 5:35 - 6:00 | Q&A                              | Q&A with lecturers/Mentors                                         |
@@ -293,7 +295,7 @@
 
 ---- 
 
-### Wed, July 29: Causality & networks
+### Wed, July 29: Network Causality
 
 **Description** Ways of discovering causal relations, ways of estimating networks, what we can do with networks
 
@@ -301,19 +303,19 @@
 |-------------|----------------------------------|--------------------------------------------------------------------|
 | 0:00 - 0:30*| Intro / keynote & tutorial setup | Causality - different views                                        |
 | 0:30 - 0:45 | Pod Q&A                          | Lecture discussion with pod TA                                     |
-| 0:50 - 2:05 | Tutorials 1 & 2 + nano-lectures  | Pitfalls of Granger Causality, Centrality                          |
+| 0:50 - 2:05 | Tutorials 1 & 2 + nano-lectures  | Pittfalls of Granger and Centrality                                |
 | 2:05 - 2:25 | Discussion 1                     | Discussion with pod TA                                             |
 | 2:25 - 3:25 | Big break                        | BREAK                                                              |
-| 3:25 - 4:40 | Tutorials 3 & 4 + nano-lectures  | Instrumental variables, Interventions                              |
+| 3:25 - 4:40 | Tutorials 3 & 4 + nano-lectures  | Instrumental Variables and interventions                           |
 | 4:40 - 5:00 | Discussion 2                     | Discussion with pod TA                                             |
-| 5:05 - 5:35 | Outro                            | Recap session, Latters of causality                                |
+| 5:05 - 5:35 | Outro                            | Recap session, Ladders of causality                                |
 | 5:35 - 6:00 | Q&A                              | Q&A with lecturers/Mentors                                         |
 
 \* the Intro / keynote will be watched asynchronously, which means that you can watch this lecture before the start of the day
 
 ---- 
 
-### Thu, July 30: Deep learning (DL) 1
+### Thu, July 30: Deep learning 1
 
 **Description** The concept of ANNs, how to train them,what they are made out of, convnets, and how to fit them to brains
 
@@ -333,7 +335,7 @@
 
 ---- 
 
-### Fri, July 31: Deep learning (DL) 2
+### Fri, July 31: Deep learning 2
 
 **Description** Deep learning in more advanced settings. Autoencoders for structure discovery, RNNs, and fitting them to brains
 
@@ -341,10 +343,10 @@
 |-------------|----------------------------------|--------------------------------------------------------------------|
 | 0:00 - 0:30*| Intro / keynote & tutorial setup | DL for structure                                                   |
 | 0:30 - 0:45 | Pod Q&A                          | Lecture discussion with pod TA                                     |
-| 0:50 - 2:05 | Tutorials 1 & 2 + nano-lectures  | Autoencoders, Recurrent Neural Network                             |
+| 0:50 - 2:05 | Tutorials 1 & 2 + nano-lectures  | Variational autoencorders and uses in Neuroscience                 |
 | 2:05 - 2:25 | Discussion 1                     | Discussion with pod TA                                             |
 | 2:25 - 3:25 | Big break                        | BREAK                                                              |
-| 3:25 - 4:40 | Tutorials 3 & 4 + nano-lectures  | Transfer learning / generalization, Causality                      |
+| 3:25 - 4:40 | Tutorials 3 & 4 + nano-lectures  | NMA wrap-up                      |
 | 4:40 - 5:00 | Discussion 2                     | Discussion with pod TA                                             |
 | 5:05 - 5:35 | Outro                            | Recap session, Digging deeper                                      |
 | 5:35 - 6:00 | Q&A                              | Q&A with lecturers/Mentors                                         |
