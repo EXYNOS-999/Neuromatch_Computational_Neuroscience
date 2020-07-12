@@ -29,3 +29,44 @@ If you're coming from outside neuroscience, it'll be great to familiarize yourse
 We're so excited to have you here! Looking forward to meeting you soon,
 
 The Neuromatch Academy team.
+
+
+## Notes 
+
+[master](https://github.com/NeuromatchAcademy/course-content.git)    
+
+[The Bash Guide](https://guide.bash.academy)     
+
+[wget_doc](https://www.gnu.org/software/wget/manual/wget.html)
+
+    -O output.ext 
+
+https://swcarpentry.github.io/python-novice-inflammation/01-intro/index.html
+
+N/A
+
+https://swcarpentry.github.io/python-novice-inflammation/02-numpy/index.html
+
+    numpy- Numerical Python
+
+https://numpy.org/doc/stable/
+
+    https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html?highlight=loadtxt#numpy.loadtxt
+
+    ndarray-- N dimentional array 
+
+    A Numpy array contains one or more elements of the same type. The type function will only tell you that a variable is a NumPy array but won’t tell you the type of thing inside the array. We can find out the type of the data contained in the NumPy array.
+
+    print(data.dtype)
+    float64
+
+    data.shape<--> R,C 
+    The expression data[30, 20] accesses the element at row 30, column 20.
+
+Why 0 not 1?
+
+    http://exple.tive.org/blarg/2013/10/22/citation-needed/ 
+    indices go from 0 to M-1 on the first axis and 0 to N-1 on the second
+
+![](numpy.png)
+
